@@ -1,0 +1,7 @@
+version: '3'
+services:
+  application:
+    image: bot
+    environment:
+      - DISCORD_TOKEN
+      - CHATGPT_API_KEY
