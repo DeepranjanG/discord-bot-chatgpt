@@ -4,4 +4,4 @@ services:
     image: 566373416292.dkr.ecr.us-east-1.amazonaws.com/discordbot:latest
     environment:
       - DISCORD_TOKEN
-      - CHATGPT_API_KEY
+      - OPENAI_API_KEY
