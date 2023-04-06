@@ -18,7 +18,7 @@ class MyClient(discord.Client):
             return
         command, user_message = None, None
 
-        for text in ['/ai', '/bot', '/chatgpt', '/chatgpt-turbo']:
+        for text in ['/ai', '/bot', '/chatgpt', '/chatgpt-turbo', '/turbo']:
             if message.content.startswith(text):
                 command = message.content.split(' ')[0]
                 user_message = message.content.replace(text, '')
@@ -28,7 +28,7 @@ class MyClient(discord.Client):
             bot_response = chatgpt_response(prompt=user_message)
             await message.channel.send(f"Answer: {bot_response}")
 
-        if command == '/chatgpt-turbo':
+        if command == '/chatgpt-turbo' or command == '/turbo':
             bot_response = chatgpt_turbo_response(message=user_message)
             await message.channel.send(f"Answer: {bot_response}")
 
