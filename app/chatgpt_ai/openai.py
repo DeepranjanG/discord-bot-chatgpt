@@ -9,7 +9,7 @@ from langchain.memory import ConversationBufferMemory
 
 load_dotenv()
 
-openai.api_key = os.getenv(OPENAI_API_KEY)
+openai.api_key = os.getenv(CHATGPT_API_KEY)
 
 
 def chatgpt_response(prompt):
