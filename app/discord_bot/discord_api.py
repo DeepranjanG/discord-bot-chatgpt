@@ -1,11 +1,10 @@
+import os
+import discord
+from app.constants import *
 from dotenv import load_dotenv
 from app.chatgpt_ai.openai import chatgpt_response, chatgpt_turbo_response
-import discord
-import os
-from app.constants import *
 
 load_dotenv()
-
 discord_token = os.getenv(DISCORD_TOKEN)
 
 

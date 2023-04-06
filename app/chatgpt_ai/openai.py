@@ -1,15 +1,14 @@
 import os
-from dotenv import load_dotenv
 import openai
-
 from app.constants import *
-
-from langchain import LLMChain, OpenAI, PromptTemplate
+from dotenv import load_dotenv
+from langchain.chat_models import ChatOpenAI
+from langchain import LLMChain, PromptTemplate
 from langchain.memory import ConversationBufferMemory
 
-load_dotenv()
 
-openai.api_key = os.getenv(CHATGPT_API_KEY)
+load_dotenv()
+openai.api_key = os.getenv(OPENAI_API_KEY)
 
 
 def chatgpt_response(prompt):
@@ -39,7 +38,7 @@ def chatgpt_turbo_response(message):
     memory = ConversationBufferMemory(memory_key="chat_history")
 
     response = LLMChain(
-        llm=OpenAI(model_name="gpt-3.5-turbo", temperature=0),
+        llm=ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0),
         prompt=prompt,
         verbose=True,
         memory=memory,

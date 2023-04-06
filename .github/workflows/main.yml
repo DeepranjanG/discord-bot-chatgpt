@@ -59,7 +59,7 @@ jobs:
       - name: Set env variable and start docker container
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          CHATGPT_API_KEY: ${{ secrets.CHATGPT_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           docker compose up -d
 
