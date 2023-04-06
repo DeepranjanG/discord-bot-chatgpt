@@ -13,7 +13,7 @@ def chatgpt_response(prompt):
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=prompt,
-        temperature=1,
+        temperature=0,
         max_tokens=100
     )
     response_dict = response.get('choices')
