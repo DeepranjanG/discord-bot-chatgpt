@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from app.chatgpt_ai.openai import chatgpt_response
+from app.chatgpt_ai.openai import chatgpt_response, chatgpt_turbo_response
 import discord
 import os
 from app.constants import *
@@ -19,14 +19,18 @@ class MyClient(discord.Client):
             return
         command, user_message = None, None
 
-        for text in ['/ai', '/bot', '/chatgpt']:
+        for text in ['/ai', '/bot', '/chatgpt', '/chatgpt-turbo']:
             if message.content.startswith(text):
                 command = message.content.split(' ')[0]
                 user_message = message.content.replace(text, '')
                 print(command, user_message)
 
         if command == '/ai' or command == '/bot' or command == '/chatgpt':
-            bot_response = chatgpt_response(prompt= user_message)
+            bot_response = chatgpt_response(prompt=user_message)
+            await message.channel.send(f"Answer: {bot_response}")
+
+        if command == '/chatgpt-turbo':
+            bot_response = chatgpt_turbo_response(message=user_message)
             await message.channel.send(f"Answer: {bot_response}")
 
 
