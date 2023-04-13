@@ -42,7 +42,7 @@ https://discord.com/developers/applications
 
 * Copy Generated URL and Save it somewhere.
 
-![11](https://user-images.githubusercontent.com/115527714/231732341-b2fcedcb-b61b-4ab8-b4df-dcf96651efe2.PNG)
+![11](https://user-images.githubusercontent.com/115527714/231777737-2e1262b0-ad73-4fbc-901e-fa6dae6387d3.PNG)
 
 * Click on General and Select Custom URL, paste the Generated URL and save changes.
 
