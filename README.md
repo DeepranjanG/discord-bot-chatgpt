@@ -64,7 +64,7 @@ https://discord.com/developers/applications
 
 4. Now we have run the project but before that export environment variables.
 ```commandline
-export DISCORD_TOKEN=MTA5MzA1MzMxMzkyODQxMzI0NA.G6P84j.BkiyHrWfVVmwA8MkgV32x87FJWuWPh81UcWGPY && export OPENAI_API_KEY=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
+export DISCORD_TOKEN='DISCORD_TOKEN' && export OPENAI_API_KEY='OPENAI_API_KEY'
 ```
 
 * Install all the libraries from requirements.txt file.
